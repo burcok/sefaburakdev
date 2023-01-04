@@ -1,26 +1,24 @@
+import trLang from '../languages/trLanguageJson.json'
+import engLang from '../languages/engLanguageJson.json'
+import deLang from '../languages/deLanguageJson.json'
 export default{
     state: () => ({
-        name:'Buster',
-        surname: 'Mr.',
-        lang:'0'
+        currentLang: engLang,
+        trLang: trLang,
+        engLang: engLang,
+        deLang: deLang
     }),
     getters: {
-        totalName(state){
-            return `${state.surname} ${state.name}`;
-        }
+
     },
     mutations:{
-        SET_NAME(state,payload){
-            state.name = payload
-        },
+
         SET_LANG(state,payload){
             state.lang = payload
         }
     },
     actions:{
-        saveName({commit},data){
-            commit('SET_NAME', data)
-        },
+
         saveLang({commit},data){
             commit('SET_LANG',data)
         }
