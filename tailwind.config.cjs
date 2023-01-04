@@ -1,14 +1,17 @@
 module.exports = {
-  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-   darkMode: false, // or 'media' or 'class'
+  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}', './node_modules/tw-elements/dist/js/**/*.js'],
+   darkMode: 'class', // or 'media' or 'class'
    theme: {
-     extend: {},
+     extend: {
+      
+     },
    },
    variants: {
      extend: {},
    },
    plugins: [
-    require('flowbite/plugin')
+    require('flowbite/plugin'),
+    require('tw-elements/dist/plugin')
   ],
   content: [
     "./node_modules/flowbite/**/*.js"

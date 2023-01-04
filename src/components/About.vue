@@ -1,7 +1,11 @@
 <template>
-    <h1 class="font-bold text-2xl">
-        Hello, {{ totalName }} {{ lang }}
-    </h1>
+    <navigationSpan/>
+    <div class="flex items-center h-screen justify-center flex-col">
+        <h1 class="font-bold text-2xl">
+            Hello, {{ totalName }} {{ lang }}
+        </h1>
+        <button class="font-bold text-xl p-4 bg-slate-400 mt-5 rounded-full" @click="goBack">Geri Dön</button>
+    </div>
 </template>
 
 <script setup>
@@ -15,12 +19,21 @@ const lang = computed(() => {
 })
 </script>
 <script>
+import navigationSpan from '../components/child-components/navigationSpan.vue'
 export default{
+    components:{
+        navigationSpan
+    },
     computed:{
         ...mapGetters([
             'totalName',
             'lang'
         ])
-    }   
+    },
+    methods: {
+        goBack() {
+        this.$router.back()
+        }
+    } 
 }
 </script>

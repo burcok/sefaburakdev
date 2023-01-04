@@ -1,9 +1,15 @@
-<script setup>
+<script>
 
+export default {
+
+}
+</script>
+<script setup>
+  
 </script>
 
 <template>
-  <div>
+  <div class="dark">
     <RouterView/>
   </div>
 </template>
