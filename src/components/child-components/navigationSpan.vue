@@ -1,10 +1,9 @@
 
 <template>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />          
-  <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
-      <div class="container flex flex-wrap items-center justify-between mx-auto">
+  <nav class="transition-colors duration-1000 bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
+      <div class="container flex flex-wrap items-center justify-around mx-auto">
       <a href="#" class="flex items-center">
-          <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
           <span class="self-center text-xl font-sans font-bold whitespace-nowrap tracking-wider dark:text-white">sefaburak.dev( )</span>
       </a>
       <div class="flex items-center md:order-2">
@@ -31,9 +30,17 @@
                   </button>
                   <ul
                     class="dark:bg-gray-900 
-                    dropdown-menu min-w-max absolute hidden 
-                    bg-white text-base z-50 float-left py-2 list-none 
-                    text-left rounded-lg shadow-lg mt-1 m-0 bg-clip-padding 
+                    transition-colors duration-1000
+                    dropdown-menu 
+                    min-w-max 
+                    absolute 
+                    hidden 
+                    bg-white 
+                    text-base z-50 
+                    float-left py-2 
+                    list-none 
+                    text-left 
+                    rounded-lg shadow-lg mt-1 m-0 bg-clip-padding 
                     border-2 border-gray-200 dark:border-gray-800" 
                     aria-labelledby="dropdownMenuButton1">
                     <li>
@@ -78,7 +85,7 @@
       <div class="menubar hidden items-center 
       justify-between w-full md:flex 
       md:w-auto md:order-1" >
-      <ul class="nav flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      <ul class="nav transition-colors duration-1000 flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
           <li>
           <router-link to="/" class="duration-700 cursor-pointer block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">{{this.$store.state.user.currentLang['navbar_a0']}}</router-link>
           </li>
@@ -119,7 +126,7 @@ export default{
       let lastChildElement = childElement.children.item(active);
       let finalElement = lastChildElement.children.item(0)
       finalElement.classList.remove("cursor-pointer", "block", "py-2", "pl-3", "pr-4", "text-gray-700", "rounded", "hover:bg-gray-100", "md:hover:bg-transparent", "md:hover:text-blue-700", "md:p-0", "dark:text-gray-400", "md:dark:hover:text-white", "dark:hover:bg-gray-700", "dark:hover:text-white", "md:dark:hover:bg-transparent", "dark:border-gray-700")
-      finalElement.classList.add("block", "py-2", "pl-3", "pr-4", "text-white", "bg-blue-700", "rounded", "md:bg-transparent", "md:text-blue-700", "md:p-0", "dark:text-white");       
+      finalElement.classList.add("block", "py-2", "pl-3", "pr-4", "text-white", "bg-blue-700", "rounded","border-b-2","dark:border-blue-700/50","border-blue-700", "md:bg-transparent", "md:text-blue-700", "md:p-0", "dark:text-white");       
     },
     getCurrentPageIndex(pageText){
       if(pageText == "/"){

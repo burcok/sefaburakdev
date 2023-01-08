@@ -2,7 +2,7 @@
     <navigationSpan/>
     <div class="flex items-center justify-center">
         <h1 class="font-bold text-2xl">
-            Hello
+            {{currentYear}}
         </h1>
 </div>
 </template>
@@ -20,6 +20,12 @@ export default{
         goBack() {
         this.$router.back()
         }
-    }
+    },
+    data() {
+        return {
+            name: 'Sefa Burak',
+            currentYear: (new Date().getFullYear() - 2005)
+        }
+    },
 }
 </script>

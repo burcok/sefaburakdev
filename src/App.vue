@@ -1,15 +1,12 @@
 <script>
 
-export default {
-
-}
 </script>
 <script setup>
   
 </script>
 
 <template>
-  <div class="dark">
+  <div class="dasrk">
     <RouterView/>
   </div>
 </template>

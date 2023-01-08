@@ -1,6 +1,7 @@
 {
-    
-  
+    "home_button_cv":"Özgeçmişimi İndir", 
+    "home_button_about":"Hakkımda Bölümüne Git",
+    "home_text_hello":"Merhaba", 
   
     "navbar_a0":"Ana Sayfa",
     "navbar_a1":"Hakkımda",

@@ -2,14 +2,23 @@
 <template>
   <div>
     <navigationSpan/>
-      <h1 class="font-extrabold text-3xl mb-10">Hello</h1>
+  </div>
+  <div>
+    <homeMainComponent/>
   </div>
 </template>
+
 <script>
 import navigationSpan from '../components/child-components/navigationSpan.vue'
+import homeMainComponent from '../components/child-components/homeMainComponent.vue'
+
 export default{
+  data() {
+    
+  },  
   components:{
-    navigationSpan
+    navigationSpan,
+    homeMainComponent
   }
 }
 </script>
