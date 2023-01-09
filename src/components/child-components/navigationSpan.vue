@@ -1,10 +1,10 @@
 
 <template>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />          
-  <nav class="transition-colors duration-1000 bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
+  <nav class="transition-colors duration-1000 bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-800">
       <div class="container flex flex-wrap items-center justify-around mx-auto">
       <a href="#" class="flex items-center">
-          <span class="self-center text-xl font-sans font-bold whitespace-nowrap tracking-wider dark:text-white">sefaburak.dev( )</span>
+          <span class="self-center text-xl font-sans font-bold whitespace-nowrap tracking-wider dark:text-white duration-1000">sefaburak.dev( )</span>
       </a>
       <div class="flex items-center md:order-2">
           <!-- Hidden -->
@@ -12,13 +12,28 @@
           <div class="flex justify-center">
               <div>
                 <div class="dropdown relative">
+                  <button @click="menubarDarkLightModeClick" class="
+                  inline-flex items-center justify-center 
+                  p-2 text-sm text-gray-500 rounded cursor-pointer 
+                  hover:text-gray-900 dark:hover:text-white
+                  duration-500
+                  "
+                  type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hidden dark-icon w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="light-icon w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                  </svg>
+                                    
+                  </button>
                   <button
                     class="
                       dropdown-toggle
                       inline-flex items-center justify-center 
                       p-2 text-sm text-gray-500 rounded cursor-pointer 
                       hover:text-gray-900 hover:bg-gray-100 
-                      dark:hover:bg-gray-700 dark:hover:text-white
+                      dark:hover:bg-gray-800 dark:hover:text-white
                     "
                     type="button"
                     id="dropdownMenuButton1"
@@ -85,7 +100,7 @@
       <div class="menubar hidden items-center 
       justify-between w-full md:flex 
       md:w-auto md:order-1" >
-      <ul class="nav transition-colors duration-1000 flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      <ul class="nav transition-colors duration-1000 flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-800 dark:border-gray-700">
           <li>
           <router-link to="/" class="duration-700 cursor-pointer block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">{{this.$store.state.user.currentLang['navbar_a0']}}</router-link>
           </li>
@@ -120,13 +135,18 @@ export default{
       let parentElement = document.querySelector('.menubar');
       parentElement.classList.toggle('hidden')
     },
+    menubarDarkLightModeClick(){
+      let toggleDarkLight = document.querySelector('.theme-page').classList.toggle('dark');
+      let light_icon = document.querySelector('.light-icon').classList.toggle('hidden');
+      let dark_icon = document.querySelector('.dark-icon').classList.toggle('hidden');
+    },
     getIndex(active){
       let parentElement = document.querySelectorAll('.nav');
       let childElement = parentElement.item(0);
       let lastChildElement = childElement.children.item(active);
       let finalElement = lastChildElement.children.item(0)
       finalElement.classList.remove("cursor-pointer", "block", "py-2", "pl-3", "pr-4", "text-gray-700", "rounded", "hover:bg-gray-100", "md:hover:bg-transparent", "md:hover:text-blue-700", "md:p-0", "dark:text-gray-400", "md:dark:hover:text-white", "dark:hover:bg-gray-700", "dark:hover:text-white", "md:dark:hover:bg-transparent", "dark:border-gray-700")
-      finalElement.classList.add("block", "py-2", "pl-3", "pr-4", "text-white", "bg-blue-700", "rounded","border-b-2","dark:border-blue-700/50","border-blue-700", "md:bg-transparent", "md:text-blue-700", "md:p-0", "dark:text-white");       
+      finalElement.classList.add("block", "py-2", "pl-3", "pr-4", "text-white", "bg-blue-700", "rounded", "md:bg-transparent", "md:text-blue-700", "md:p-0", "dark:text-white");       
     },
     getCurrentPageIndex(pageText){
       if(pageText == "/"){
@@ -148,7 +168,8 @@ export default{
   },
   computed:{
     ...mapState([
-        'lang'
+        'lang',
+        'theme'
     ])
   },
 }

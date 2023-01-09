@@ -6,13 +6,12 @@ export default{
         currentLang: engLang,
         trLang: trLang,
         engLang: engLang,
-        deLang: deLang
+        deLang: deLang,
     }),
     getters: {
-
+        
     },
     mutations:{
-
         SET_LANG(state,payload){
             state.lang = payload
         }
