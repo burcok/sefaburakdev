@@ -51,7 +51,7 @@
             },}"
             :delay="200" 
             class="mx-12  max-w-3xl pt-4 pb-32 sm:pt-48 sm:pb-40">
-            <div class="w-80 transition-colors duration-1000 md:w-96 h-80 border-2 rounded-2xl dark:border-gray-700/20 dark:bg-gray-800/75 bg-slate-100 drop-shadow-2xl py-16 px-4">
+            <div class="w-80 transition-colors duration-1000 md:w-96 h-80 border-2 rounded-2xl dark:border-gray-700/20 dark:bg-gray-800/75 bg-slate-100 shadow-2xl shadow-blue-600/10 py-16 px-4">
                 <div class="font-mono"><span class="text-gray-500 mr-0 md:mr-4">1</span>&nbsp;&nbsp;<span class="text-purple-800 dark:text-purple-600">export default</span><span class="text-orange-400">{</span></div>
                 <div class="font-mono"><span class="text-gray-500 mr-0 md:mr-5">2</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue-600">data</span><span class="text-purple-800 dark:text-purple-600 tracking-widest"> () {</span></div>
                 <div class="font-mono"><span class="text-gray-500 mr-0 md:mr-6">3</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-red-500">name</span><span class="text-blue-600">:</span> <span class="text-green-800 dark:text-green-500">'Sefa Burak'</span><span class="dark:text-white"> ,</span></div>

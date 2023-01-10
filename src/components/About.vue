@@ -11,7 +11,7 @@
 
 </script>
 <script>
-import navigationSpan from '../components/child-components/navigationSpan.vue'
+import navigationSpan from '../components/span-components/navigationSpan.vue'
 export default{
     components:{
         navigationSpan
@@ -26,6 +26,6 @@ export default{
             name: 'Sefa Burak',
             currentYear: (new Date().getFullYear() - 2005)
         }
-    },
+    }
 }
 </script>

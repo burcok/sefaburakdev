@@ -1,13 +1,27 @@
 <template>
     <navigationSpan/>
-    <h1>education</h1>
 </template>
-<script>
-import navigationSpan from '../components/child-components/navigationSpan.vue'
 
-export default{
+
+<script>
+import navigationSpan from '../components/span-components/navigationSpan.vue'
+export default {
+    data() {
+      return {
+        
+      }
+    },
+    mounted() {
+        addEventListener("keypress",function(event) {
+        if (event.code == 'Escape'){
+            console.log("backspace")}
+        else{
+            console.log(event.code)
+            }
+        })
+    }, //diğer sayfada keyboard çalışıyor
     components:{
         navigationSpan
     },
-}
+  }
 </script>

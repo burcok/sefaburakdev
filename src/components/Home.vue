@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import navigationSpan from '../components/child-components/navigationSpan.vue'
-import homeMainComponent from '../components/child-components/homeMainComponent.vue'
+import navigationSpan from '../components/span-components/navigationSpan.vue'
+import homeMainComponent from './main-component-childs/homeMainComponent.vue'
 
 export default{
   data() {

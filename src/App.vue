@@ -4,6 +4,11 @@
 <script>
 import Spinner from 'vue-spinner/src/PulseLoader.vue'
 export default{
+  data() {
+    return {
+      loading:true
+    }
+  },
   mounted() {
     document.onreadystatechange = () => {
       if (document.readyState == "complete") {
