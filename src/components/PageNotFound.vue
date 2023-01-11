@@ -181,10 +181,11 @@
 					</svg>
 
 				</div>
-				<p v-motion-pop v-motion-pop-visible class="duration-500 text-lg md:text-2xl text-black dark:text-white/80 p-2 my-5 lg:my-8">The stuff you were looking for doesn't exist
+				<p v-motion-pop v-motion-pop-visible class="duration-500 text-lg md:text-2xl text-black dark:text-white/80 p-2 my-5 lg:my-8">
+					{{this.$store.state.user.currentLang['pageNotFound_text']}}
 				</p>
 				<router-link v-motion-pop v-motion-pop-visible to="/" href="#" class="duration-1000 hover:duration-500 text-center hover:bg-black hover:text-white bg-gray-800 text-white/80 dark:hover:bg-gray-300 dark:bg-white/90 dark:text-gray-700 inline-block rounded-lg px-2.5 md:px-4 py-1.5 text-base font-semibold leading-7 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                    Return Home
+                    {{this.$store.state.user.currentLang['pageNotFound_button']}}
                     <span class="text-gray-400 dark:text-gray-700 sm:inline-block hidden" aria-hidden="true">&rarr;</span>
                   </router-link>
 			</div>

@@ -9,5 +9,9 @@
     "navbar_a3":"İletişim",
     "navbar_lang_en":"İngilizce (ABD)",
     "navbar_lang_de":"Almanca",
-    "navbar_lang_tr":"Türkçe"
+    "navbar_lang_tr":"Türkçe",
+
+
+    "pageNotFound_text":"Opps. Aradığınız şey mevcut değil.",
+    "pageNotFound_button":"Ana Sayfaya Dön"
 }

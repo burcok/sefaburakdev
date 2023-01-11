@@ -3,7 +3,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />          
   <nav class="transition-colors duration-1000 bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-800">
       <div class="container flex flex-wrap items-center justify-around mx-auto">
-      <a href="#" class="flex items-center">
+      <a href="/" class="flex items-center">
           <span class="self-center text-xl font-sans font-bold whitespace-nowrap tracking-wider dark:text-white duration-1000">sefaburak.dev( )</span>
       </a>
       <div class="flex items-center md:order-2">
@@ -18,7 +18,7 @@
                 duration-500
                 "
                 type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hidden dark-icon w-6 h-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="dark-icon w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
                 </svg>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="light-icon w-6 h-6">
@@ -163,6 +163,11 @@ export default{
   },
   mounted(){
     this.getIndex(this.getCurrentPageIndex(this.currentRoute))
+    if (document.querySelector('.theme-page').classList.contains('dark')){
+      document.querySelector('.light-icon').classList.add('hidden');
+    }else{
+      document.querySelector('.dark-icon').classList.add('hidden');
+    }
   },
   computed:{
     ...mapState([

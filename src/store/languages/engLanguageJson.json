@@ -9,5 +9,9 @@
     "navbar_a3":"Contact",
     "navbar_lang_en":"English (US)",
     "navbar_lang_de":"Deutsch",
-    "navbar_lang_tr":"Turkish"
+    "navbar_lang_tr":"Turkish",
+
+
+    "pageNotFound_text":"Opps. The stuff you were looking for doesn't exist.",
+    "pageNotFound_button":"Return Home"
 }

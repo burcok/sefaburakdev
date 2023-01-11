@@ -2,7 +2,7 @@
 <template>
     <main class="dark:bg-gray-800 transition-colors duration-1000">
         <div class="relative flex justify-around items-center flex-wrap px-6 lg:px-8">
-          <div class="mx-8 sm:mx-12 max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
+          <div class="mx-8 sm:mx-12 max-w-3xl pt-20 pb-32 sm:pt-36 sm:pb-40">
               <div v-motion-pop v-motion-pop-visible>
                 <h6 style="font-family: 'Quicksand', sans-serif;" class="duration-1000 dark:text-gray-400 text-sm italic tracking-tight sm:text-start sm:text-sm mb-3">~ {{this.$store.state.user.currentLang['home_text_hello']}}</h6>
                 <h1 class="duration-1000 dark:text-white/90 text-4xl font-bold tracking-tight sm:text-start italic sm:text-6xl">Sefa Burak Dereli</h1>
@@ -50,7 +50,7 @@
               mass:5,
             },}"
             :delay="200" 
-            class="mx-12  max-w-3xl pt-4 pb-32 sm:pt-48 sm:pb-40">
+            class="mx-12  max-w-3xl pt-4 pb-32 sm:pt-36 sm:pb-40">
             <div class="w-80 transition-colors duration-1000 md:w-96 h-80 border-2 rounded-2xl dark:border-gray-700/20 dark:bg-gray-800/75 bg-slate-100 shadow-2xl shadow-blue-600/10 py-16 px-4">
                 <div class="font-mono"><span class="text-gray-500 mr-0 md:mr-4">1</span>&nbsp;&nbsp;<span class="text-purple-800 dark:text-purple-600">export default</span><span class="text-orange-400">{</span></div>
                 <div class="font-mono"><span class="text-gray-500 mr-0 md:mr-5">2</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue-600">data</span><span class="text-purple-800 dark:text-purple-600 tracking-widest"> () {</span></div>
