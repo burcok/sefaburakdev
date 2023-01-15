@@ -1,7 +1,7 @@
 
 <template>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />          
-  <nav class="transition-colors duration-1000 bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-800">
+  <nav class="duration-1000 bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-800">
       <div class="container flex flex-wrap items-center justify-around mx-auto">
       <a href="/" class="flex items-center">
           <span class="self-center text-xl font-sans font-bold whitespace-nowrap tracking-wider dark:text-white duration-1000">sefaburak.dev( )</span>
@@ -42,9 +42,8 @@
                 <span class="material-symbols-outlined text-gray-700 dark:text-gray-400 dark:hover:text-white">translate</span>
                   
                 </button>
-                <ul
-                  class="dark:bg-gray-900 
-                  transition-colors duration-1000
+                <ul v-motion-slide-visible-right
+                  class="dark:bg-gray-900
                   dropdown-menu 
                   min-w-max 
                   absolute 
@@ -98,7 +97,7 @@
       <div class="menubar hidden items-center 
       justify-between w-full md:flex 
       md:w-auto md:order-1" >
-      <ul class="nav transition-colors duration-1000 flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-800 dark:border-gray-700">
+      <ul class="nav duration-1000 flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-800 dark:border-gray-700">
           <li>
           <router-link to="/" class="duration-700 cursor-pointer block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">{{this.$store.state.user.currentLang['navbar_a0']}}</router-link>
           </li>

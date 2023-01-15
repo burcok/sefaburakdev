@@ -1,6 +1,6 @@
 <template>
     <navigationSpan/>
-    <div id="box" class="inset-0 ri bg-red-500 h-36 w-36"></div>
+    <p class="text"></p>
 </template>
 
 
@@ -9,31 +9,32 @@ import navigationSpan from '../components/span-components/navigationSpan.vue'
 export default {
     data() {
         return {
-            box: document.querySelector("#box")
+            count:0,
+            data: 'Merhaba benim adım Burak'
         }
     },
     methods: {
         myEventListener(event) {
-            if (event.code == 'ArrowDown'){
-                console.log("aaaa")
-            }else if (event.code == 'ArrowUp'){
-                console.log("aaaAAA")
-            }else if (event.code == 'ArrowLeft'){
-                console.log("aaaAAA")
-            }else if (event.code == 'ArrowRight'){
-                console.log("aaaAAA")
+            if (event.code == 'Backspace'){
+                this.count = this.count - 1;
+                document.querySelector('.text').innerHTML = this.cutData(this.data, this.count)
+            }else if (event.code == 'Delete'){
+                this.count = this.count - 1;
+                document.querySelector('.text').innerHTML = this.cutData(this.data, this.count)
             }
             else {
-                console.log(event.code)
+                this.count = this.count + 1;
+                document.querySelector('.text').innerHTML = this.cutData(this.data, this.count)
             }
+        },
+        cutData(data, count) {
+            return data.slice(0, count);
         }
     },
     mounted() {
-        console.log('1')
         addEventListener("keydown", this.myEventListener);
     },
     beforeUnmount() {
-        console.log("2")
         removeEventListener("keydown", this.myEventListener);
     },
     //diğer sayfada keyboard çalışıyor

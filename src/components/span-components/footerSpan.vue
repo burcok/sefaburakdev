@@ -1,6 +1,6 @@
 <template>
-    <footer class="p-4 bg-white dark:bg-gray-800">
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <footer v-motion-slide-bottom class="duration-1000 p-4 bg-white dark:bg-gray-800">
+        <hr class="duration-1000 my-6 border-gray-300 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div class="mb-6 sm:px-4">
             <a href="/">
                 <span class="self-start text-xl font-sans font-bold whitespace-nowrap tracking-wider dark:text-white duration-1000">sefaburak.dev( )</span>

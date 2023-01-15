@@ -6,10 +6,14 @@
   <div>
     <contactMainComponent/>
   </div>
+  <div>
+    <footerSpan/>
+  </div>
 </template>
 
 <script>
 import navigationSpan from './span-components/navigationSpan.vue'
+import footerSpan from '../components/span-components/footerSpan.vue'
 import contactMainComponent from './main-component-childs/contactMainComponent.vue'
 
 export default{
@@ -18,7 +22,8 @@ export default{
   },  
   components:{
     navigationSpan,
-    contactMainComponent
+    contactMainComponent,
+    footerSpan
   }
 }
 </script>
