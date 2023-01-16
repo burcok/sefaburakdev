@@ -171,7 +171,6 @@ export default{
   computed:{
     ...mapState([
         'lang',
-        'theme'
     ])
   },
 }

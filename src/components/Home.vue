@@ -1,20 +1,26 @@
 
 <template>
-  <div>
-    <navigationSpan/>
+  <div class="overflow-hidden">
+    <div>
+      <navigationSpan/>
+    </div>
+    <div>
+      <homeMainComponent/>
+    </div>
+    <div>
+      <pageLanguagesComponent/>
+    </div>
+    <div>
+      <footerSpan/>
+    </div>
   </div>
-  <div>
-    <homeMainComponent/>
-  </div>
-  <div>
-    <footerSpan/>
-  </div>
-</template>
+</template> 
 
 <script>
 import navigationSpan from '../components/span-components/navigationSpan.vue'
 import footerSpan from '../components/span-components/footerSpan.vue'
 import homeMainComponent from './main-component-childs/homeMainComponent.vue'
+import pageLanguagesComponent from './main-component-childs/pageLanguagesComponent.vue'
 
 export default{
   data() {
@@ -23,6 +29,7 @@ export default{
   components:{
     navigationSpan,
     homeMainComponent,
+    pageLanguagesComponent,
     footerSpan
   }
 }
