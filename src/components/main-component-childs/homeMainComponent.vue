@@ -7,7 +7,7 @@
               :initial="{ scale: 0, x: -1000 }"
               :enter="{ x: 0, scale: 1,transition: {
                 type: 'spring',
-                damping: 20,
+                damping: 40,
                 mass:5,
               },}"
               :delay="200" >
@@ -53,10 +53,10 @@
             :initial="{ scale: 0, x: 1000 }"
             :enter="{ x: 0, scale: 1,transition: {
               type: 'spring',
-              damping: 20,
+              damping: 40,
               mass:5,
             },}"
-            :delay="200" 
+            :delay="200"  
             class="mx-12  max-w-3xl pt-4 pb-32 sm:pt-36 sm:pb-40">
             <div class="w-80 duration-1000 md:w-96 h-80 border-2 rounded-2xl dark:border-gray-700/20 dark:bg-gray-800/75 bg-slate-100 shadow-2xl shadow-blue-600/10 py-16 px-4">
                 <div class="font-mono"><span class="text-gray-500 mr-0 md:mr-4">1</span>&nbsp;&nbsp;<span class="text-purple-800 dark:text-purple-600">export default</span><span class="text-orange-400">{</span></div>
