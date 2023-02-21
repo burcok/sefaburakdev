@@ -1,14 +1,22 @@
 
 
+<div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="https://github.com/burcok">
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=burcok&show_icons=true&theme=radical" />
+</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://github.com/burcok">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=burcok&layout=compact)]("https://github.com/burcok/sefaburakdev") />
+</a>
+</div>
+
 <p align="center">
   <a href="#how-to-use">How To Use</a> •
   <a href="#download">Download</a> •
   <a href="#credits">Credits</a> 
 </p>
-
-
-
-
 ## How To Use
 
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
@@ -51,6 +59,9 @@ This software uses the following open source packages:
 - [Animation - Motion](https://motion.vueuse.org/)
 - [npm Packages](https://www.npmjs.com/)
 ---
+
+
+
 
 > Instagram [@buroockq](https://www.instagram.com/buroockq) &nbsp;&middot;&nbsp;
 > GitHub [@burcok](https://github.com/burcok) &nbsp;&middot;&nbsp;
