@@ -1,4 +1,9 @@
+<script>
+import { useStore } from 'vuex';
 
+const store = useStore()
+
+</script>
 <template>
     <main class="dark:bg-gray-800 duration-1000">
         <div class="relative flex justify-around items-center flex-wrap px-6 lg:px-8">
@@ -11,12 +16,12 @@
                 mass:5,
               },}"
               :delay="200" >
-                <h6 style="font-family: 'Quicksand', sans-serif;" class="duration-1000 dark:text-gray-400 text-sm italic tracking-tight sm:text-start sm:text-sm mb-3">~ {{this.$store.state.user.currentLang['home_text_hello']}}</h6>
+                <h6 style="font-family: 'Quicksand', sans-serif;" class="duration-1000 dark:text-gray-400 text-sm italic tracking-tight sm:text-start sm:text-sm mb-3">~ {{$store.state.user.currentLang['home_text_hello']}}</h6>
                 <h1 class="duration-1000 dark:text-white/90 text-4xl font-bold tracking-tight sm:text-start italic sm:text-6xl">Sefa Burak Dereli</h1>
                 <p style="font-family: 'Quicksand', sans-serif;" class="duration-1000 dark:text-gray-400 italic mt-6 text-lg leading-8 text-gray-600 sm:text-start">JR. Front-End Developer</p>
                 <div class="mt-8 flex gap-x-4 sm:justify-start">
                   <button data-popover-target="popover-bottom" data-popover-placement="bottom" type="button" class="duration-1000 inline-block rounded-lg hover:duration-500 dark:bg-blue-700/80 bg-blue-800 px-2.5 md:px-4 py-1.5 text-base font-semibold leading-7 hover:text-white text-white/80 shadow-sm ring-1 ring-indigo-600 hover:bg-blue-700 hover:ring-indigo-700">
-                    {{this.$store.state.user.currentLang['home_button_cv']}}
+                    {{$store.state.user.currentLang['home_button_cv']}}
                     <span class="text-gray-400 dark:text-gray-700 sm:inline-block hidden" aria-hidden="true">&rarr;</span>
                   </button>
                   <div data-popover id="popover-bottom" role="tooltip" class="hidden absolute z-50 invisible sm:inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-500 bg-red-600/80 border border-gray-400 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
@@ -32,7 +37,7 @@
                   </div>
 
                   <router-link to="/about" href="#" class="duration-1000 hover:duration-500 text-center hover:bg-black hover:text-white bg-gray-800 text-white/80 dark:hover:bg-gray-300 dark:bg-white/90 dark:text-gray-700 inline-block rounded-lg px-2.5 md:px-4 py-1.5 text-base font-semibold leading-7 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                    {{this.$store.state.user.currentLang['home_button_about']}}
+                    {{$store.state.user.currentLang['home_button_about']}}
                     <span class="text-gray-400 dark:text-gray-700 sm:inline-block hidden" aria-hidden="true">&rarr;</span>
                   </router-link>
                 </div>
