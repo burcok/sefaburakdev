@@ -1,7 +1,7 @@
 <template>
     <div v-motion-slide-bottom class="duration-1000 pb-20 px-10 md:px-32 bg-white dark:bg-gray-800">
-        <div class="duration-1000 text-center pt-10 font-bold text-3xl dark:text-white/80 text-gray-800">Languages</div>
-        <div class="duration-1000 text-center pt-3 font-light text-xl text-gray-400">This website is coded with these languages</div>
+        <div class="duration-1000 text-center pt-10 font-bold text-3xl dark:text-white/80 text-gray-800">{{$store.state.user.currentLang['home_languages_text1']}}</div>
+        <div class="duration-1000 text-center pt-3 font-light text-xl text-gray-400">{{$store.state.user.currentLang['home_languages_text2']}}</div>
         <div class="mt-20 w-full bg-gray-200 rounded-full dark:bg-gray-700">
             <div class="flex h-4">
                 <div class="bg-green-400 p-1 rounded-none rounded-tl-full rounded-bl-full" style="width: 94.6%"></div>

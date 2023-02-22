@@ -1,6 +1,6 @@
 
 <template>
-  <div class="overflow-hidden">
+  <div class="dark:bg-gray-800 duration-1000 overflow-hidden">
     <div>
       <navigationSpan/>
     </div>

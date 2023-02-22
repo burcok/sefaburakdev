@@ -2,7 +2,18 @@
     "home_button_cv":"Download CV",
     "home_button_about":"Go To About Me",
     "home_text_hello":"Hello",
+    "home_languages_text1":"Code Languages", 
+    "home_languages_text2":"This website is coded with these languages.",
 
+    "contact_button_submit":"Submit",
+    "contact_form_label1":"Name",
+    "contact_form_label2":"E-Mail",
+    "contact_form_label3":"Message",
+    "contact_form_h2":"Feedback",
+    "contact_form_p1":"Contact with me.",
+    "contact_form_p2":"Please fill out the form completely.",
+
+    
     "navbar_a0":"Home",
     "navbar_a1":"About Me",
     "navbar_a2":"Education",

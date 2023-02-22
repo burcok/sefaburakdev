@@ -2,9 +2,9 @@
     <navigationSpan/>
     <div class="flex items-center justify-center">
         <h1 class="font-bold text-2xl">
-            {{currentYear}}
+            THE UNDER CONSTRUCTİON
         </h1>
-</div>
+    </div>
 </template>
 
 <script setup>

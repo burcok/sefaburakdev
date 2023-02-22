@@ -2,7 +2,16 @@
     "home_button_cv":"Lebenslauf Herunterladen",
     "home_button_about":"Gehe Sie zu Über mich",
     "home_text_hello":"Hallo",
+    "home_languages_text1":"Codesprachen", 
+    "home_languages_text2":"Diese Website ist mit diesen Sprachen kodiert.",
 
+    "contact_button_submit":"einreichen",
+    "contact_form_label1":"Name",
+    "contact_form_label2":"E-Mail",
+    "contact_form_label3":"Nachricht",
+    "contact_form_h2":"Rückmeldung",
+    "contact_form_p1":"Kontaktiere mich.",
+    "contact_form_p2":"Bitte füllen Sie das Formular vollständig aus.",
 
     "navbar_a0":"Home",
     "navbar_a1":"?Ber uns",
