@@ -1,37 +1,35 @@
-
 <template>
   <div class="background bg-gray-200 dark:bg-gray-800 duration-1000 overflow-hidden">
     <div>
-      <navigationSpan/>
+      <navigationSpan />
+    </div>
+    <div class="min-h-screen">
+      <div>
+        <homeMainComponent />
+      </div>
+      <div>
+        <pageLanguagesComponent />
+      </div>
     </div>
     <div>
-      <homeMainComponent/>
-    </div>
-    <div>
-      <pageLanguagesComponent/>
-    </div>
-    <div>
-      <footerSpan/>
+      <footerSpan />
     </div>
   </div>
-</template> 
+</template>
 
 <script>
-import navigationSpan from '../components/span-components/navigationSpan.vue'
-import footerSpan from '../components/span-components/footerSpan.vue'
-import homeMainComponent from './main-component-childs/homeMainComponent.vue'
-import pageLanguagesComponent from './main-component-childs/pageLanguagesComponent.vue'
+import navigationSpan from "../components/span-components/navigationSpan.vue";
+import footerSpan from "../components/span-components/footerSpan.vue";
+import homeMainComponent from "./main-component-childs/homeMainComponent.vue";
+import pageLanguagesComponent from "./main-component-childs/pageLanguagesComponent.vue";
 
-export default{
-  data() {
-    
-  },  
-  components:{
+export default {
+  data() {},
+  components: {
     navigationSpan,
     homeMainComponent,
     pageLanguagesComponent,
-    footerSpan
-  }
-}
+    footerSpan,
+  },
+};
 </script>
-
