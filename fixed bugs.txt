@@ -1,0 +1,11 @@
+26.02.2023
+
+background images +
+contact mobile +
+adding new cursor +
+adding about page +
+dark-light mode transitions +
+footer animation +
+landing animations +
+transparent divs +  
+contact form submit -
