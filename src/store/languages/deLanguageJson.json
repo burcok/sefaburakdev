@@ -12,6 +12,8 @@
     "contact_form_h2":"Rückmeldung",
     "contact_form_p1":"Kontaktiere mich.",
     "contact_form_p2":"Bitte füllen Sie das Formular vollständig aus.",
+    "contact_form_placeholder":"Schreiben Sie Ihre Gedanken hier auf.",
+
 
     "navbar_a0":"Home",
     "navbar_a1":"?Ber uns",
@@ -20,6 +22,14 @@
     "navbar_lang_en":"Englisch (US)",
     "navbar_lang_de":"Deutsch",
     "navbar_lang_tr":"Türkisch",
+
+
+    "about_text_h2":"Ich bin ein Front-End-Entwickler, der in der Türkei lebt und ",
+    "about_text_h2_2":"jahre alt ist.",
+    "about_text_p1":"Liebe zum Detail, Bug Hunter, Gamer und sehr kompatibel mit ihrem Team.",
+    "about_text_p2":"Ich teile auch gerne Inhalte darüber, was ich im Laufe der Jahre bei Vue Development gelernt habe. Sie können meiner",
+    "about_text_p2_2":"-Seite folgen, auf der ich hilfreiche Inhalte über die Entwicklung und Programmierung von Vue poste.",
+    "about_text_p3":"Ich bin offen für Stellenangebote, bei denen ich mich verbessern und einen Beitrag leisten kann. Wenn Sie eine gute Gelegenheit haben, die meinen Fähigkeiten und Erfahrungen entspricht, kontaktieren Sie mich bitte.",
 
 
     "pageNotFound_text":"Opps. Das Zeug, nach dem Sie gesucht haben, existiert nicht.",

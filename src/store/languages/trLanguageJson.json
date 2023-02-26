@@ -13,6 +13,7 @@
     "contact_form_h2":"Geri Bildirim",
     "contact_form_p1":"Benimle iletişime geçin.",
     "contact_form_p2":"Lütfen formu eksiksiz doldurunuz.",
+    "contact_form_placeholder":"Düşüncelerinizi buraya yazınız.",
 
     
     "navbar_a0":"Ana Sayfa",
@@ -22,6 +23,14 @@
     "navbar_lang_en":"İngilizce (ABD)",
     "navbar_lang_de":"Almanca",
     "navbar_lang_tr":"Türkçe",
+
+
+    "about_text_h2":"Türkiye'de yaşayan ve ",
+    "about_text_h2_2":"yaşında bir Front-End Geliştiricisi'yim.",
+    "about_text_p1":"Detaylara dikkat eden, hata avcısı, oyuncu ve ekibiyle son derece uyumlu.",
+    "about_text_p2":"Ayrıca Vue Geliştirme'de yıllar içinde öğrendiklerime dair içerikler paylaşmayı seviyorum, Vue Geliştirme ve Programlama hakkında faydalı içerikler paylaştığım ",
+    "about_text_p2_2":"sayfamı takip edebilirsiniz.",
+    "about_text_p3":"Kendimi geliştirebileceğim ve katkıda bulunabileceğim iş fırsatlarına açığım. Becerilerime ve deneyimime uyan iyi bir fırsatınız varsa, lütfen benimle iletişime geçin.",
 
 
     "pageNotFound_text":"Opps. Aradığınız şey mevcut değil.",

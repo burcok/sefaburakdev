@@ -9,7 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@formkit/auto-animate": "^1.0.0-beta.6",
     "@vueuse/motion": "^2.0.0-beta.12",
+    "cursor-dot": "^1.0.5",
     "firebase": "^9.17.1",
     "flowbite": "^1.6.0",
     "tns-core-modules": "^6.5.27",

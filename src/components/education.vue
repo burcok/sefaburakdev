@@ -1,15 +1,26 @@
 <template>
-    <navigationSpan/>
-    <div class="duration-1000 background bg-white dark:bg-gray-800 h-[100vh] w-full">
-        
-    </div>
+    <div class="background bg-gray-200 dark:bg-gray-800 duration-1000 overflow-hidden">
+        <div>
+          <navigationSpan/>
+        </div>
+        <div class="h-[100vh]">
+            <h1 class="dark:text-white flex items-center justify-center font-bold text-2xl">
+                THE UNDER CONSTRUCTİON
+            </h1>
+        </div>
+        <div>
+          <footerSpan/>
+        </div>
+      </div>
 </template>
 
 <script>
 import navigationSpan from '../components/span-components/navigationSpan.vue'
+import footerSpan from '../components/span-components/footerSpan.vue'
 export default{
     components:{
-        navigationSpan
+        navigationSpan,
+        footerSpan
     },
   }
 </script>

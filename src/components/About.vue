@@ -1,31 +1,27 @@
 <template>
-    <navigationSpan/>
-    <div class="flex items-center justify-center">
-        <h1 class="font-bold text-2xl">
-            THE UNDER CONSTRUCTİON
-        </h1>
+  <div class="background bg-gray-200 dark:bg-gray-800 duration-1000 overflow-hidden">
+    <div>
+      <navigationSpan />
     </div>
+    <div class="min-h-screen">
+      <aboutMainComponent />
+    </div>
+    <div>
+      <footerSpan />
+    </div>
+  </div>
 </template>
 
-<script setup>
-
-</script>
+<script setup></script>
 <script>
-import navigationSpan from '../components/span-components/navigationSpan.vue'
-export default{
-    components:{
-        navigationSpan
-    },
-    methods: {
-        goBack() {
-        this.$router.back()
-        }
-    },
-    data() {
-        return {
-            name: 'Sefa Burak',
-            currentYear: (new Date().getFullYear() - 2005)
-        }
-    }
-}
+import footerSpan from "../components/span-components/footerSpan.vue";
+import aboutMainComponent from "../components/main-component-childs/aboutMainComponent.vue";
+import navigationSpan from "../components/span-components/navigationSpan.vue";
+export default {
+  components: {
+    navigationSpan,
+    footerSpan,
+    aboutMainComponent,
+  },
+};
 </script>

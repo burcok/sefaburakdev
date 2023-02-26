@@ -12,7 +12,8 @@
     "contact_form_h2":"Feedback",
     "contact_form_p1":"Contact with me.",
     "contact_form_p2":"Please fill out the form completely.",
-
+    "contact_form_placeholder":"Write your thoughts here.",
+    
     
     "navbar_a0":"Home",
     "navbar_a1":"About Me",
@@ -21,6 +22,14 @@
     "navbar_lang_en":"English (US)",
     "navbar_lang_de":"Deutsch",
     "navbar_lang_tr":"Turkish",
+
+    
+    "about_text_h2":"I’m a Front-End Developer who live in Turkey and ",
+    "about_text_h2_2":"y.o.",
+    "about_text_p1":"Attention to detail, bug hunter, gamer and highly compatible with her team.",
+    "about_text_p2":"I also love to share content about what I’ve learned over the years at Vue Development, you can follow my",
+    "about_text_p2_2":"page where I post helpful content on Vue Development and Programming.",
+    "about_text_p3":"I’m open to job opportunities where I can improve myself and contribute. If you have a good opportunity that matches my skills and experience, please contact me.",
 
 
     "pageNotFound_text":"Opps. The stuff you were looking for doesn't exist.",

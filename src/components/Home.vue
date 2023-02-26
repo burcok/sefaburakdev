@@ -1,6 +1,6 @@
 
 <template>
-  <div class="dark:bg-gray-800 duration-1000 overflow-hidden">
+  <div class="background bg-gray-200 dark:bg-gray-800 duration-1000 overflow-hidden">
     <div>
       <navigationSpan/>
     </div>
@@ -34,10 +34,4 @@ export default{
   }
 }
 </script>
-<script setup>
-
-
-</script>
-
-
 
