@@ -28,7 +28,7 @@
                 <div class="scale duration-1000 my-10 p-6 shadow-inner dark:shadow-xl bg-gray-300/50 dark:bg-gray-700/40 rounded-3xl">
                     <p class="duration-1000 text-xl font-mono dark:text-gray-300 text-gray-600">İsmet İnönü Mesleki ve Teknik Anadolu Lisesi</p>
                     <p class="font-mono dark:text-gray-400 text-gray-500">{{ $store.state.user.currentLang["education_work_p"] }}</p>
-                    <p class="font-mono dark:text-gray-400 text-gray-500">2019 - 2023 {{ $store.state.user.currentLang["education_work_p3"] }}: 90</p>
+                    <p class="font-mono dark:text-gray-400 text-gray-500">2019 - 2023 {{ $store.state.user.currentLang["education_work_p_3"] }}: 90</p>
                 </div>
             </div>
             <div v-motion
