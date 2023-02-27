@@ -11,19 +11,19 @@
 }
 .scroller > ul {
   position: absolute;
-  top: 0em;
-  animation: slide 5s infinite;
+  top: -0.1em;
+  animation: slide 10s infinite;
   font-weight: bold;
 }
 @keyframes slide {
-  0% {
-    top: 0em;
+  0%,20% {
+    top: -0.1em;
   }
-  33% {
+  35%,55% {
     top: -1.6em;
   }
-  66% {
-    top: -3.05em;
+  70%,85% {
+    top: -3.1em;
   }
 }
 </style>

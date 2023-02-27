@@ -2,6 +2,7 @@
     "home_button_cv":"Download CV",
     "home_button_about":"Go To About Me",
     "home_text_hello":"Hello",
+    "home_text_developer":"Developer",
     "home_languages_text1":"Code Languages", 
     "home_languages_text2":"This website is coded with these languages.",
 
@@ -30,6 +31,17 @@
     "about_text_p2":"I also love to share content about what I’ve learned over the years at Vue Development, you can follow my",
     "about_text_p2_2":"page where I post helpful content on Vue Development and Programming.",
     "about_text_p3":"I’m open to job opportunities where I can improve myself and contribute. If you have a good opportunity that matches my skills and experience, please contact me.",
+
+
+    "education_work_h2":"Work Experience",
+    "education_work_p":"Student",
+    "education_work_p_2":"Highschool Intern",
+    "education_skills_h2":"Skills",
+    "education_languages_h2":"Languages",
+    "education_languages_h3":"English",
+    "education_languages_p":"Professional working competence",
+    "education_languages_h3_2":"Turkish",
+    "education_languages_p_2":"Native language competence",
 
 
     "pageNotFound_text":"Opps. The stuff you were looking for doesn't exist.",

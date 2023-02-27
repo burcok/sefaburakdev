@@ -2,6 +2,7 @@
     "home_button_cv":"Lebenslauf Herunterladen",
     "home_button_about":"Gehe Sie zu Über mich",
     "home_text_hello":"Hallo",
+    "home_text_developer":"Entwickler",
     "home_languages_text1":"Codesprachen", 
     "home_languages_text2":"Diese Website ist mit diesen Sprachen kodiert.",
 
@@ -30,6 +31,17 @@
     "about_text_p2":"Ich teile auch gerne Inhalte darüber, was ich im Laufe der Jahre bei Vue Development gelernt habe. Sie können meiner",
     "about_text_p2_2":"-Seite folgen, auf der ich hilfreiche Inhalte über die Entwicklung und Programmierung von Vue poste.",
     "about_text_p3":"Ich bin offen für Stellenangebote, bei denen ich mich verbessern und einen Beitrag leisten kann. Wenn Sie eine gute Gelegenheit haben, die meinen Fähigkeiten und Erfahrungen entspricht, kontaktieren Sie mich bitte.",
+
+
+    "education_work_h2":"Arbeitserfahrung",
+    "education_work_p":"Student",
+    "education_work_p_2":"Gymnasiale Praktikant",
+    "education_skills_h2":"Capabilities",
+    "education_languages_h2":"Sprachen",
+    "education_languages_h3":"Englisch",
+    "education_languages_p":"Professionelle krbeitsfähigkeiten",
+    "education_languages_h3_2":"Türkisch",
+    "education_languages_p_2":"Muttersprachliche kompetenz",
 
 
     "pageNotFound_text":"Opps. Das Zeug, nach dem Sie gesucht haben, existiert nicht.",

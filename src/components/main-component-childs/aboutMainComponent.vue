@@ -1,29 +1,52 @@
 <template>
   <div class="pt-0 md:pt-14">
     <div
-      v-motion
-      :initial="{ scale: 0, x: -1000 }"
+      class="m-auto w-10/12 md:w-4/6 flex mt-12 md:mt-[5%] flex-col justify-center"
+    >
+      <div v-motion
+      :initial="{ opacity:0, x: -1000 }"
       :enter="{
         x: 0,
-        scale: 1,
+        opacity:1,
         transition: {
           type: 'spring',
           damping: 40,
           mass: 5,
         },
       }"
-      :delay="300"
-      class="p-12 lg:p-40 xl:px-[20%] xl:py-[5%] flex flex-col justify-center"
-    >
-      <h2 class="duration-1000 text-black dark:text-white text-3xl font-mono">
-        {{ $store.state.user.currentLang["about_text_h2"] }} {{ this.age }}
+      :delay="200" class="text-black dark:text-white text-3xl font-mono">
+        <h2 class="duration-1000">
+          {{ $store.state.user.currentLang["about_text_h2"] }} {{ this.age }}
         {{ $store.state.user.currentLang["about_text_h2_2"] }}
-      </h2>
-      <p class="duration-1000 mt-10 text-lg font-mono text-black dark:text-gray-200">
-        {{ $store.state.user.currentLang["about_text_p1"] }}
-      </p>
-      <p class="duration-1000 my-10 text-lg font-mono text-black dark:text-gray-200">
-        {{ $store.state.user.currentLang["about_text_p2"] }}
+        </h2>
+      </div>
+      <div v-motion
+      :initial="{ opacity: 0, x: -1000 }"
+      :enter="{
+        x: 0,
+        opacity: 1,
+        transition: {
+          type: 'spring',
+          damping: 40,
+          mass: 5,
+        },
+      }"
+      :delay="400" class="mt-10 text-lg font-mono text-black dark:text-gray-200">
+        <p class="duration-1000">{{ $store.state.user.currentLang["about_text_p1"] }}</p>
+      </div>
+      <div v-motion
+      :initial="{ opacity: 0, x: -1000 }"
+      :enter="{
+        x: 0,
+        opacity: 1,
+        transition: {
+          type: 'spring',
+          damping: 40,
+          mass: 5,
+        },
+      }"
+      :delay="600" class="my-10 text-lg font-mono text-black dark:text-gray-200">
+        <p class="duration-1000">{{ $store.state.user.currentLang["about_text_p2"] }}
         <span
           ><a
             class="hover:text-pink-500 hover:underline text-lg font-mono"
@@ -33,12 +56,34 @@
             >Instagram</a
           ></span
         >
-        {{ $store.state.user.currentLang["about_text_p2_2"] }}
-      </p>
-      <p class="duration-1000 text-lg font-mono text-black dark:text-gray-200">
-        {{ $store.state.user.currentLang["about_text_p3"] }}
-      </p>
-      <div class="w-64 mt-12">
+        {{ $store.state.user.currentLang["about_text_p2_2"] }}</p>
+      </div>
+      <div v-motion
+      :initial="{ opacity: 0, x: -1000 }"
+      :enter="{
+        x: 0,
+        opacity: 1,
+        transition: {
+          type: 'spring',
+          damping: 40,
+          mass: 5,
+        },
+      }"
+      :delay="800" class="text-lg font-mono text-black dark:text-gray-200">
+        <p class="duration-1000">{{ $store.state.user.currentLang["about_text_p3"] }}</p>  
+      </div>
+      <div v-motion
+      :initial="{ opacity: 0, x: -1000 }"
+      :enter="{
+        x: 0,
+        opacity: 1,
+        transition: {
+          type: 'spring',
+          damping: 40,
+          mass: 5,
+        },
+      }"
+      :delay="1000" class="w-64 mt-12">
         <ul class="flex justify-evenly">
           <li>
             <a
@@ -116,7 +161,7 @@
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/in/burak-dereli-07707521a/"
+              href="https://www.linkedin.com/in/burcok/"
               target="_blank"
               class="duration-1000 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-500"
             >
@@ -136,12 +181,6 @@
       </div>
     </div>
   </div>
-  <!-- //I’m a Front-End Developer who live in Turkey and 17 y.o. //Attention to detail,
-  problem hunter, gamer and highly compatible with her team //I also love to share content
-  about what I’ve learned over the years at Vue Development, you can follow my Instagram
-  page where I post helpful content on Vue Development and Programming. //I’m open to job
-  opportunities where I can improve myself and contribute. If you have a good opportunity
-  that matches my skills and experience, please contact me. -->
 </template>
 
 <script>

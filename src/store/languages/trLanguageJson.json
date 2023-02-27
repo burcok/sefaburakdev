@@ -2,6 +2,7 @@
     "home_button_cv":"Özgeçmişimi İndir", 
     "home_button_about":"Hakkımda Bölümüne Git",
     "home_text_hello":"Merhaba",
+    "home_text_developer":"Geliştiricisi",
     "home_languages_text1":"Yazılım Dilleri", 
     "home_languages_text2":"Bu web sitesi bu dillerle kodlanmıştır.",
   
@@ -31,6 +32,17 @@
     "about_text_p2":"Ayrıca Vue Geliştirme'de yıllar içinde öğrendiklerime dair içerikler paylaşmayı seviyorum, Vue Geliştirme ve Programlama hakkında faydalı içerikler paylaştığım ",
     "about_text_p2_2":"sayfamı takip edebilirsiniz.",
     "about_text_p3":"Kendimi geliştirebileceğim ve katkıda bulunabileceğim iş fırsatlarına açığım. Becerilerime ve deneyimime uyan iyi bir fırsatınız varsa, lütfen benimle iletişime geçin.",
+
+
+    "education_work_h2":"İş deneyimi",
+    "education_work_p":"Öğrenci",
+    "education_work_p_2":"Lise Stajı",
+    "education_skills_h2":"Yetenekler",
+    "education_languages_h2":"Diller",
+    "education_languages_h3":"İngilizce",
+    "education_languages_p":"Profesyonel çalışma yeterliliği",
+    "education_languages_h3_2":"Türkçe",
+    "education_languages_p_2":"Ana dil yeterliliği",
 
 
     "pageNotFound_text":"Opps. Aradığınız şey mevcut değil.",

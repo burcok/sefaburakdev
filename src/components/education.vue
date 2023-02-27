@@ -3,10 +3,8 @@
         <div>
           <navigationSpan/>
         </div>
-        <div class="h-[100vh]">
-            <h1 class="dark:text-white flex items-center justify-center font-bold text-2xl">
-                THE UNDER CONSTRUCTİON
-            </h1>
+        <div class="min-h-screen">
+          <educationMainComponent/>
         </div>
         <div>
           <footerSpan/>
@@ -17,10 +15,12 @@
 <script>
 import navigationSpan from '../components/span-components/navigationSpan.vue'
 import footerSpan from '../components/span-components/footerSpan.vue'
+import educationMainComponent from "./main-component-childs/educationMainComponent.vue";
 export default{
     components:{
         navigationSpan,
-        footerSpan
+        footerSpan,
+        educationMainComponent
     },
   }
 </script>

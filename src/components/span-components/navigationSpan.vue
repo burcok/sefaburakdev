@@ -241,11 +241,9 @@ export default {
       parentElement.classList.toggle("hidden");
     },
     menubarDarkLightModeClick() {
-      let toggleDarkLight = document
-        .querySelector(".theme-page")
-        .classList.toggle("dark");
-      let light_icon = document.querySelector(".light-icon").classList.toggle("hidden");
-      let dark_icon = document.querySelector(".dark-icon").classList.toggle("hidden");
+      document.querySelector(".theme-page").classList.toggle("dark");
+      document.querySelector(".light-icon").classList.toggle("hidden");
+      document.querySelector(".dark-icon").classList.toggle("hidden");
     },
     getIndex(active) {
       let parentElement = document.querySelectorAll(".nav");

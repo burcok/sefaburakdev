@@ -30,7 +30,7 @@
           style="font-family: 'Quicksand', sans-serif"
           class="duration-1000 dark:text-gray-400 italic mt-6 text-lg leading-8 text-gray-600 sm:text-start"
         >
-          JR. Front-End Developer
+          JR. Front-End {{ $store.state.user.currentLang["home_text_developer"] }}
         </p>
         <div class="flex mt-8 gap-x-4">
           <button

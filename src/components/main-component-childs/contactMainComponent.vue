@@ -140,7 +140,7 @@
                   ></path>
                 </svg>
               </div>
-              <input
+                <input
                 type="text"
                 id="name"
                 v-model="name"
