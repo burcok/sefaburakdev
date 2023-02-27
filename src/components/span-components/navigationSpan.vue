@@ -63,7 +63,6 @@
               >
             </button>
             <ul
-              v-motion-slide-visible-top
               class="dark:bg-gray-900/40 dropdown-menu min-w-max absolute hidden bg-white/70 text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 m-0 bg-clip-padding border-2 border-gray-200 dark:border-gray-800"
               aria-labelledby="dropdownMenuButton1"
             >
