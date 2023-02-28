@@ -49,7 +49,7 @@
         <p class="duration-1000">{{ $store.state.user.currentLang["about_text_p2"] }}
         <span
           ><a
-            class="hover:text-pink-500 hover:underline text-lg font-mono"
+            class="hover:text-pink-500 underline font-mono"
             href="http://instagram.com/vuengineer"
             target="_blank"
             rel="noopener noreferrer"

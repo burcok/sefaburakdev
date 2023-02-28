@@ -4,18 +4,8 @@
       class="container px-5 pt-5 pb-12 md:py-24 mx-auto flex sm:flex-nowrap flex-wrap-reverse"
     >
       <div
-        v-motion
-        :initial="{ scale: 0, x: -1000 }"
-        :enter="{
-          x: 0,
-          scale: 1,
-          transition: {
-            type: 'spring',
-            damping: 40,
-            mass: 5,
-          },
-        }"
-        :delay="200"
+        v-motion-slide-left
+        v-motion-slide-visible-left
         class="shadow-2xl lg:w-2/3 md:w-1/2 dark:bg-gray-800 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative"
       >
         <div class="hidden absolute inset-0 md:flex items-center justify-center">
@@ -27,18 +17,34 @@
         >
           Loading...
         </h1>
-        <iframe
+        <!-- <iframe
           id="iframemap"
           class="absolute inset-0"
           width="100%"
           height="100%"
-          @load="IframeLoading"
+          :on-load="IframeLoading"
           frameborder="0"
           scrolling="no"
           marginheight="0"
           marginwidth="0"
           src="https://maps.google.com/maps?width=100%25&amp;height=1000&amp;hl=en&amp;q=Antalya,Turkey+(My%20Home)&amp;t=k&amp;z=6&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+        ></iframe> -->
+        <iframe
+          src="https://widgets.scribblemaps.com/sm/?d=true&z=true&l=true&id=FxCL8xFWxq&s"
+          allow="geolocation"
+          frameborder="0"
+          id="iframemap"
+          class="absolute inset-0"
+          width="100%"
+          height="100%"
+          :on-load="IframeLoading"
         ></iframe>
+        <!-- <img
+          class="absolute inset-0"
+          :on-load="IframeLoading"
+          id="iframemap"
+          src="https://www.scribblemaps.com/api/maps/images/450/450/FxCL8xFWxq.png"
+        /> -->
         <!-- <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed" style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe> -->
         <div
           class="w-full duration-1000 opacity-0 lg:opacity-100 flex dark:bg-gray-800 bg-white relative flex-wrap py-6 rounded shadow-md"
@@ -105,7 +111,7 @@
         :delay="200"
       >
         <div class="flex flex-col">
-          <form @submit.prevent="submitForm">
+          <form ref="form" @submit.prevent="sendEmail">
             <h2
               class="duration-1000 text-gray-900 dark:text-white/80 text-lg mb-1 font-medium title-font"
             >
@@ -140,10 +146,9 @@
                   ></path>
                 </svg>
               </div>
-                <input
+              <input
                 type="text"
-                id="name"
-                v-model="name"
+                name="from_name"
                 class="duration-1000 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="John Doe"
               />
@@ -175,8 +180,7 @@
               </div>
               <input
                 type="email"
-                id="email"
-                v-model="email"
+                name="from_email"
                 class="duration-1000 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="info@sefaburak.dev"
               />
@@ -188,8 +192,7 @@
                 >{{ $store.state.user.currentLang["contact_form_label3"] }}</label
               >
               <textarea
-                id="message"
-                v-model="message"
+                name="message"
                 rows="4"
                 class="duration-1000 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 :placeholder="$store.state.user.currentLang['contact_form_placeholder']"
@@ -210,10 +213,61 @@
       </div>
     </div>
   </main>
+  <div
+    v-motion-slide-left
+    v-motion-slide-visible-left
+    class="form-failed absolute hidden bottom-0 p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+    role="alert"
+  >
+    <svg
+      aria-hidden="true"
+      class="flex-shrink-0 inline w-5 h-5 mr-3"
+      fill="currentColor"
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+        clip-rule="evenodd"
+      ></path>
+    </svg>
+    <span class="sr-only">Info</span>
+    <div>
+      <span class="font-medium">Danger alert!</span> Change a few things up and try
+      submitting again.
+    </div>
+  </div>
+  <div
+    v-motion-slide-left
+    v-motion-slide-visible-left
+    class="form-succes absolute bottom-0 hidden p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"
+    role="alert"
+  >
+    <svg
+      aria-hidden="true"
+      class="flex-shrink-0 inline w-5 h-5 mr-3"
+      fill="currentColor"
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+        clip-rule="evenodd"
+      ></path>
+    </svg>
+    <span class="sr-only">Info</span>
+    <div>
+      <span class="font-medium">Success alert!</span> Change a few things up and try
+      submitting again.
+    </div>
+  </div>
 </template>
 
 <script>
 import Spinner from "vue-spinner/src/PulseLoader.vue";
+import emailjs from "@emailjs/browser";
 
 export default {
   components: {
@@ -224,6 +278,36 @@ export default {
       document.querySelector("#spinner").classList.add("hidden");
       document.querySelector("#spinnermobile").classList.add("hidden");
       document.querySelector("#iframemap").classList.remove("hidden");
+    },
+    sendEmail() {
+      emailjs
+        .sendForm(
+          "service_wdmyrud",
+          "template_6dtwlh4",
+          this.$refs.form,
+          "hyJWAgrzHWZBQlJAA"
+        )
+        .then(
+          (result) => {
+            document.querySelector(".form-succes").classList.remove("hidden");
+            document.querySelector(".form-succes").classList.add("flex");
+            setTimeout(() => {
+              document.querySelector(".form-succes").classList.add("hidden");
+              document.querySelector(".form-succes").classList.remove("flex");
+            }, 5000);
+            console.log(result);
+          },
+          (error) => {
+            document.querySelector(".form-failed").classList.remove("hidden");
+            document.querySelector(".form-failed").classList.add("flex");
+            setTimeout(() => {
+              document.querySelector(".form-failed").classList.add("hidden");
+              document.querySelector(".form-failed").classList.remove("flex");
+            }, 5000);
+            console.log(error);
+          }
+        );
+      this.$refs.form.reset();
     },
   },
 };

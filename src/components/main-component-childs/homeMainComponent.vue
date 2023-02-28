@@ -36,7 +36,6 @@
           <button
             data-popover-target="popover-bottom"
             data-popover-placement="bottom"
-            type="button"
             class="duration-1000 hidden md:inline-block rounded-lg hover:duration-500 dark:bg-blue-700/80 bg-blue-800 px-2.5 md:px-4 py-1.5 text-base font-semibold leading-7 hover:text-white text-white/80 shadow-sm ring-1 ring-indigo-600 hover:bg-blue-700 hover:ring-indigo-700"
           >
             {{ $store.state.user.currentLang["home_button_cv"] }}
@@ -44,21 +43,17 @@
               class="text-gray-400 dark:text-gray-700 sm:inline-block hidden"
               aria-hidden="true"
               >&rarr;</span
-            ></button
-          ><!--pc-->
-          <a class="inline-block md:hidden">
-            <button
-              type="button"
-              class="duration-1000 rounded-lg hover:duration-500 dark:bg-blue-700/80 bg-blue-800 px-2.5 md:px-4 py-1.5 text-base font-semibold leading-7 hover:text-white text-white/80 shadow-sm ring-1 ring-indigo-600 hover:bg-blue-700 hover:ring-indigo-700"
             >
-              {{ $store.state.user.currentLang["home_button_cv"] }}
-              <span
-                class="text-gray-400 dark:text-gray-700 sm:inline-block hidden"
-                aria-hidden="true"
-                >&rarr;</span
-              >
-            </button> </a
-          ><!--mobil-->
+          </button>
+          <a
+            href="../../assets/resume.pdf"
+            download="resume.pdf"
+            class="md:hidden duration-1000 inline-block rounded-lg hover:duration-500 dark:bg-blue-700/80 bg-blue-800 px-2.5 md:px-4 py-1.5 text-base font-semibold leading-7 hover:text-white text-white/80 shadow-sm ring-1 ring-indigo-600 hover:bg-blue-700 hover:ring-indigo-700"
+            >{{ $store.state.user.currentLang["home_button_cv"] }}
+            <span class="text-gray-400 dark:text-gray-700 sm:inline-block hidden"
+              >&rarr;</span
+            ></a
+          >
           <div
             data-popover
             id="popover-bottom"
@@ -73,8 +68,8 @@
               </h3>
             </div>
             <div class="px-3 py-2">
-              <a>
-                <img src="../../assets/cv.jpg" alt="" />
+              <a href="../../assets/resume.pdf" download="resume.pdf">
+                <img src="../../assets/cv.jpg" alt="resume" />
               </a>
             </div>
             <div data-popper-arrow></div>

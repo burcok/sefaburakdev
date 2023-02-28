@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@formkit/auto-animate": "^1.0.0-beta.6",
     "@vueuse/motion": "^2.0.0-beta.12",
     "cursor-dot": "^1.0.5",
