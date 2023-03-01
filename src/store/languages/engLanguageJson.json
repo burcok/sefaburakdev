@@ -1,5 +1,5 @@
 {
-    "home_button_cv":"Download CV",
+    "home_button_cv":"Download Resume",
     "home_button_about":"Go To About Me",
     "home_text_hello":"Hello",
     "home_text_developer":"Developer",
@@ -14,7 +14,8 @@
     "contact_form_p1":"Contact with me.",
     "contact_form_p2":"Please fill out the form completely.",
     "contact_form_placeholder":"Write your thoughts here.",
-    
+    "contact_form_success":"The form has been successfully received.",
+    "contact_form_error":"The form could not be submitted. Please try again later.",
     
     "navbar_a0":"Home",
     "navbar_a1":"About Me",

@@ -32,30 +32,20 @@
         >
           JR. Front-End {{ $store.state.user.currentLang["home_text_developer"] }}
         </p>
-        <div class="flex mt-8 gap-x-4">
-          <button
+        <div class="flex mt-8 gap-x-4 text-center">
+          <a
             data-popover-target="popover-bottom"
             data-popover-placement="bottom"
-            class="duration-1000 hidden md:inline-block rounded-lg hover:duration-500 dark:bg-blue-700/80 bg-blue-800 px-2.5 md:px-4 py-1.5 text-base font-semibold leading-7 hover:text-white text-white/80 shadow-sm ring-1 ring-indigo-600 hover:bg-blue-700 hover:ring-indigo-700"
-          >
-            {{ $store.state.user.currentLang["home_button_cv"] }}
-            <span
-              class="text-gray-400 dark:text-gray-700 sm:inline-block hidden"
-              aria-hidden="true"
-              >&rarr;</span
-            >
-          </button>
-          <a
             href="../../assets/resume.pdf"
             download="resume.pdf"
-            class="md:hidden duration-1000 inline-block rounded-lg hover:duration-500 dark:bg-blue-700/80 bg-blue-800 px-2.5 md:px-4 py-1.5 text-base font-semibold leading-7 hover:text-white text-white/80 shadow-sm ring-1 ring-indigo-600 hover:bg-blue-700 hover:ring-indigo-700"
+            class="duration-1000 inline-block rounded-lg hover:duration-500 dark:bg-blue-700/80 bg-blue-800 px-2.5 md:px-4 py-1.5 text-base font-semibold leading-7 hover:text-white text-white/80 shadow-sm ring-1 ring-indigo-600 hover:bg-blue-700 hover:ring-indigo-700"
             >{{ $store.state.user.currentLang["home_button_cv"] }}
             <span class="text-gray-400 dark:text-gray-700 sm:inline-block hidden"
               >&rarr;</span
             ></a
           >
           <div
-            data-popover
+            data-popover="popover-bottom"
             id="popover-bottom"
             role="tooltip"
             class="hidden absolute z-50 invisible sm:inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-500 bg-red-600/80 border border-gray-400 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"

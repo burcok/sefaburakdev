@@ -37,7 +37,7 @@
           class="absolute inset-0"
           width="100%"
           height="100%"
-          :on-load="IframeLoading"
+          @load="IframeLoading"
         ></iframe>
         <!-- <img
           class="absolute inset-0"
@@ -47,51 +47,29 @@
         /> -->
         <!-- <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed" style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe> -->
         <div
-          class="w-full duration-1000 opacity-0 lg:opacity-100 flex dark:bg-gray-800 bg-white relative flex-wrap py-6 rounded shadow-md"
+          class="duration-1000 opacity-0 lg:opacity-100 hidden md:flex dark:bg-gray-800 bg-white relative flex-wrap py-6 rounded shadow-inner"
         >
-          <div class="lg:w-1/2 px-6">
-            <h2
-              class="duration-1000 title-font font-bold dark:text-white/80 tracking-widest text-xs"
-            >
-              SOCIAL
-            </h2>
-            <div class="my-2">
-              <a
-                class="duration-1000 hover:underline dark:text-white/50 hover:text-gray-900"
-                href="#"
-              >
-                Discord
-              </a>
-            </div>
-            <div>
-              <a
-                class="duration-1000 hover:underline dark:text-white/50 hover:text-gray-900"
-                href="#"
-              >
-                Instagram
-              </a>
-            </div>
-          </div>
-          <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+          <div class="lg:w-full px-6 mt-4 lg:mt-0">
             <h2
               class="duration-1000 title-font font-bold dark:text-white/80 text-gray-900 tracking-widest text-xs"
             >
               E-MAIL
             </h2>
-            <div class="">
+            <span class="">
               <a
                 href="mailTo:info@sefaburak.com"
                 class="duration-1000 hover:underline cursor-pointer text-indigo-500 leading-relaxed"
                 >info@sefaburak.com</a
               >
-            </div>
-            <div class="">
+            </span>
+            <span class="mx-5">|</span>
+            <span class="">
               <a
                 href="mailTo:burakdereli03@gmail.com"
                 class="duration-1000 hover:underline cursor-pointer text-indigo-500 leading-relaxed"
                 >burakdereli03@gmail.com</a
               >
-            </div>
+            </span>
           </div>
         </div>
       </div>
@@ -214,54 +192,104 @@
     </div>
   </main>
   <div
-    v-motion-slide-left
-    v-motion-slide-visible-left
-    class="form-failed absolute hidden bottom-0 p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+    id="toast-success"
+    class="hidden absolute bottom-0 items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
     role="alert"
   >
-    <svg
-      aria-hidden="true"
-      class="flex-shrink-0 inline w-5 h-5 mr-3"
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
+    <div
+      class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200"
     >
-      <path
-        fill-rule="evenodd"
-        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-        clip-rule="evenodd"
-      ></path>
-    </svg>
-    <span class="sr-only">Info</span>
-    <div>
-      <span class="font-medium">Danger alert!</span> Change a few things up and try
-      submitting again.
+      <svg
+        aria-hidden="true"
+        class="w-5 h-5"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      <span class="sr-only">Check icon</span>
     </div>
+    <div class="ml-3 text-sm font-normal">
+      {{ $store.state.user.currentLang["contact_form_success"] }}
+      <span class="font-bold">(x{{ successCount }})</span>
+    </div>
+    <button
+      type="button"
+      class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
+      data-dismiss-target="#toast-success"
+      aria-label="Close"
+    >
+      <span class="sr-only">Close</span>
+      <svg
+        aria-hidden="true"
+        class="w-5 h-5"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+    </button>
   </div>
+  <!--  -->
+
   <div
-    v-motion-slide-left
-    v-motion-slide-visible-left
-    class="form-succes absolute bottom-0 hidden p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"
+    id="toast-danger"
+    class="hidden absolute bottom-0 items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
     role="alert"
   >
-    <svg
-      aria-hidden="true"
-      class="flex-shrink-0 inline w-5 h-5 mr-3"
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
+    <div
+      class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-red-500 bg-red-100 rounded-lg dark:bg-red-800 dark:text-red-200"
     >
-      <path
-        fill-rule="evenodd"
-        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-        clip-rule="evenodd"
-      ></path>
-    </svg>
-    <span class="sr-only">Info</span>
-    <div>
-      <span class="font-medium">Success alert!</span> Change a few things up and try
-      submitting again.
+      <svg
+        aria-hidden="true"
+        class="w-5 h-5"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      <span class="sr-only">Error icon</span>
     </div>
+    <div class="ml-3 text-sm font-normal">
+      {{ $store.state.user.currentLang["contact_form_error"] }}
+      <span class="font-bold">(x{{ errorCount }})</span>
+    </div>
+    <button
+      type="button"
+      class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
+      data-dismiss-target="#toast-danger"
+      aria-label="Close"
+    >
+      <span class="sr-only">Close</span>
+      <svg
+        aria-hidden="true"
+        class="w-5 h-5"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+    </button>
   </div>
 </template>
 
@@ -280,6 +308,15 @@ export default {
       document.querySelector("#iframemap").classList.remove("hidden");
     },
     sendEmail() {
+      const success = document.querySelector("#toast-success").classList;
+      const error = document.querySelector("#toast-danger").classList;
+      try {
+        success.remove("flex");
+        success.add("hidden");
+        error.remove("flex");
+        error.add("hidden");
+      } finally {
+      }
       emailjs
         .sendForm(
           "service_wdmyrud",
@@ -289,26 +326,24 @@ export default {
         )
         .then(
           (result) => {
-            document.querySelector(".form-succes").classList.remove("hidden");
-            document.querySelector(".form-succes").classList.add("flex");
-            setTimeout(() => {
-              document.querySelector(".form-succes").classList.add("hidden");
-              document.querySelector(".form-succes").classList.remove("flex");
-            }, 5000);
-            console.log(result);
+            this.successCount += 1;
+            success.remove("hidden");
+            success.add("flex");
           },
-          (error) => {
-            document.querySelector(".form-failed").classList.remove("hidden");
-            document.querySelector(".form-failed").classList.add("flex");
-            setTimeout(() => {
-              document.querySelector(".form-failed").classList.add("hidden");
-              document.querySelector(".form-failed").classList.remove("flex");
-            }, 5000);
-            console.log(error);
+          (result) => {
+            this.errorCount += 1;
+            error.remove("hidden");
+            error.add("flex");
           }
         );
       this.$refs.form.reset();
     },
+  },
+  data() {
+    return {
+      successCount: null,
+      errorCount: null,
+    };
   },
 };
 </script>
