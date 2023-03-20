@@ -6,7 +6,7 @@
       <div
         v-motion-slide-left
         v-motion-slide-visible-left
-        class="shadow-2xl lg:w-2/3 md:w-1/2 dark:bg-gray-800 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative"
+        class="h-96 sm:h-[35rem] shadow-2xl w-full lg:w-2/3 md:w-1/2 dark:bg-gray-800 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative"
       >
         <div class="hidden absolute inset-0 md:flex items-center justify-center">
           <Spinner id="spinner" margin="10px" color="#455588" />

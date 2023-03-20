@@ -1,5 +1,5 @@
 {
-    "home_button_cv":"Download Resume",
+    "home_button_cv":"Review Resume",
     "home_button_about":"Go To About Me",
     "home_text_hello":"Hello",
     "home_text_developer":"Developer",
@@ -21,14 +21,15 @@
     "navbar_a1":"About Me",
     "navbar_a2":"Education",
     "navbar_a3":"Contact",
+    "navbar_a4":"Blog",
     "navbar_lang_en":"English (US)",
     "navbar_lang_de":"Deutsch",
     "navbar_lang_tr":"Turkish",
 
     
-    "about_text_h2":"I’m a Front-End Developer who live in Turkey and ",
+    "about_text_h2":"I’m a Full-Stack Developer who live in Turkey and ",
     "about_text_h2_2":"y.o.",
-    "about_text_p1":"Attention to detail, bug hunter, gamer and highly compatible with her team.",
+    "about_text_p1":"Attention to detail, bug hunter, gamer and highly compatible with his team.",
     "about_text_p2":"I also love to share content about what I’ve learned over the years at Vue Development, you can follow my",
     "about_text_p2_2":"page where I post helpful content on Vue Development and Programming.",
     "about_text_p3":"I’m open to job opportunities where I can improve myself and contribute. If you have a good opportunity that matches my skills and experience, please contact me.",

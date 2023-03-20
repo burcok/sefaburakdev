@@ -1,6 +1,6 @@
 <template>
   <main class="relative flex justify-around items-center flex-wrap px-6 lg:px-8">
-    <div class="mx-8 sm:mx-12 max-w-3xl pt-20 pb-32 sm:pt-36 sm:pb-40">
+    <div class="mx-5 sm:mx-12 max-w-3xl pt-20 pb-4 sm:pt-36 sm:pb-40">
       <div
         v-motion
         :initial="{ scale: 0, x: -1000 }"
@@ -33,42 +33,21 @@
           JR. Front-End {{ $store.state.user.currentLang["home_text_developer"] }}
         </p>
         <div class="flex mt-8 gap-x-4 text-center">
-          <a
-            data-popover-target="popover-bottom"
-            data-popover-placement="bottom"
-            href="../../assets/resume.pdf"
-            download="resume.pdf"
-            class="duration-1000 inline-block rounded-lg hover:duration-500 dark:bg-blue-700/80 bg-blue-800 px-2.5 md:px-4 py-1.5 text-base font-semibold leading-7 hover:text-white text-white/80 shadow-sm ring-1 ring-indigo-600 hover:bg-blue-700 hover:ring-indigo-700"
-            >{{ $store.state.user.currentLang["home_button_cv"] }}
+          <router-link
+            to="/resume"
+            type="button"
+            class="duration-1000 inline-block rounded-lg hover:duration-500 dark:bg-blue-700/80 bg-blue-800 px-2.5 md:px-4 py-1.5 text-sm md:text-base font-semibold leading-7 hover:text-white text-white/80 shadow-sm ring-1 ring-indigo-600 hover:bg-blue-700 hover:ring-indigo-700"
+          >
+            {{ $store.state.user.currentLang["home_button_cv"] }}
             <span class="text-gray-400 dark:text-gray-700 sm:inline-block hidden"
               >&rarr;</span
-            ></a
-          >
-          <div
-            data-popover="popover-bottom"
-            id="popover-bottom"
-            role="tooltip"
-            class="hidden absolute z-50 invisible sm:inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-500 bg-red-600/80 border border-gray-400 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
-          >
-            <div
-              class="px-3 py-2 bg-gray-100 border-b border-gray-400 rounded-t-lg dark:border-gray-600 dark:bg-gray-700"
             >
-              <h3 class="font-semibold text-gray-900 dark:text-white">
-                Click Image For Download CV
-              </h3>
-            </div>
-            <div class="px-3 py-2">
-              <a href="../../assets/resume.pdf" download="resume.pdf">
-                <img src="../../assets/cv.jpg" alt="resume" />
-              </a>
-            </div>
-            <div data-popper-arrow></div>
-          </div>
+          </router-link>
 
           <router-link
             to="/about"
             href="#"
-            class="duration-1000 hover:duration-500 text-center hover:bg-black hover:text-white bg-gray-800 text-white/80 dark:hover:bg-gray-300 dark:bg-white/90 dark:text-gray-700 inline-block rounded-lg px-2.5 md:px-4 py-1.5 text-base font-semibold leading-7 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+            class="duration-1000 hover:duration-500 text-center hover:bg-black hover:text-white bg-gray-800 text-white/80 dark:hover:bg-gray-300 dark:bg-white/90 dark:text-gray-700 inline-block rounded-lg px-2.5 md:px-4 py-1.5 text-sm md:text-base font-semibold leading-7 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
           >
             {{ $store.state.user.currentLang["home_button_about"] }}
             <span

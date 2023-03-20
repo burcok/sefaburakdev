@@ -1,5 +1,5 @@
 {
-    "home_button_cv":"Lebenslauf Herunterladen",
+    "home_button_cv":"Lebenslauf Überprüfen",
     "home_button_about":"Gehe Sie zu Über mich",
     "home_text_hello":"Hallo",
     "home_text_developer":"Entwickler",
@@ -22,12 +22,13 @@
     "navbar_a1":"?Ber uns",
     "navbar_a2":"Bildung",
     "navbar_a3":"Kontakt",
+    "navbar_a4":"Bloggen",
     "navbar_lang_en":"Englisch (US)",
     "navbar_lang_de":"Deutsch",
     "navbar_lang_tr":"Türkisch",
 
 
-    "about_text_h2":"Ich bin ein Front-End-Entwickler, der in der Türkei lebt und ",
+    "about_text_h2":"Ich bin ein Full-Stack-Entwickler, der in der Türkei lebt und ",
     "about_text_h2_2":"jahre alt ist.",
     "about_text_p1":"Liebe zum Detail, Bug Hunter, Gamer und sehr kompatibel mit ihrem Team.",
     "about_text_p2":"Ich teile auch gerne Inhalte darüber, was ich im Laufe der Jahre bei Vue Development gelernt habe. Sie können meiner",

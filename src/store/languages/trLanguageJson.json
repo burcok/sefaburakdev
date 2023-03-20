@@ -1,5 +1,5 @@
 {
-    "home_button_cv":"Özgeçmişimi İndir", 
+    "home_button_cv":"Özgeçmişimi İncele", 
     "home_button_about":"Hakkımda Bölümüne Git",
     "home_text_hello":"Merhaba",
     "home_text_developer":"Geliştiricisi",
@@ -23,13 +23,14 @@
     "navbar_a1":"Hakkımda",
     "navbar_a2":"Eğitim",
     "navbar_a3":"İletişim",
+    "navbar_a4":"Blog",
     "navbar_lang_en":"İngilizce (ABD)",
     "navbar_lang_de":"Almanca",
     "navbar_lang_tr":"Türkçe",
 
 
     "about_text_h2":"Türkiye'de yaşayan ve ",
-    "about_text_h2_2":"yaşında bir Front-End Geliştiricisi'yim.",
+    "about_text_h2_2":"yaşında bir Full-Stack Geliştiricisiyim.",
     "about_text_p1":"Detaylara dikkat eden, hata avcısı, oyuncu ve ekibiyle son derece uyumlu.",
     "about_text_p2":"Ayrıca Vue Geliştirme'de yıllar içinde öğrendiklerime dair içerikler paylaşmayı seviyorum, Vue Geliştirme ve Programlama hakkında faydalı içerikler paylaştığım ",
     "about_text_p2_2":"sayfamı takip edebilirsiniz.",

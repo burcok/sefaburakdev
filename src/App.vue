@@ -45,7 +45,7 @@ export default {
   </div>
   <div v-else>
     <div class="theme-page scroll-smooth">
-      <RouterView />
+      <RouterView translate="no" />
     </div>
   </div>
 </template>

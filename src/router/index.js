@@ -4,13 +4,18 @@ import About from '/src/components/About.vue'
 import Education from '/src/components/education.vue' 
 import Contact from '/src/components/contact.vue' 
 import PageNotFound from '/src/components/PageNotFound.vue' 
-
+import Resume from '/src/components/Resume.vue'
 
 const routes = [
     {
         path: '/',
         name: 'Home',
         component: Home,
+    },
+    {
+        path: '/resume',
+        name: 'Resume',
+        component: Resume,
     },
     {
         path: '/about',
