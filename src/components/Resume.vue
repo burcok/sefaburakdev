@@ -3,7 +3,7 @@ import router from '../router'; import router from '../router';
 <template>
   <div class="w-screen h-screen bg-[#1E1C27] overflow-x-hidden">
     <iframe
-      src="https://drive.google.com/file/d/1nfqLxbz5o21mncpJ_is5aetyRtfCbBhR/preview"
+      src="https://drive.google.com/file/d/1k03iWgVJuWkKzgUcWNMfrGaqSAPjUQqC/preview"
       width="100%"
       height="100%"
     ></iframe>
